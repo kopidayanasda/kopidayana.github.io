@@ -37,7 +37,7 @@ section
 	height: 100vh;
 	background: url(img/bgdayana.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto;
 }
 nav
 {
