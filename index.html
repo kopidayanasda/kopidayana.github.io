@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DAYANA COFFEE & EATERY</title>
+    <!-- custom css link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- header section start -->
+    <div class="header" id="home">
+        <nav id="navbar">
+            <a href="#" class="logo"><img src="img/dayanalogo.png" alt="Dayana Logo"></a>
+            <div class="links" id="nav">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#blog">menu</a>
+                <a href="#contact">contact</a>
+            </div>
+            <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+            <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+        </nav>
+        <div class="content">
+            <h3>CARI CAFE AESTHETIC DAN HARGA MENUNYA RAMAH DIKANTONG?</h3>
+            <h1>dayana coffee &<br>eatery</h1>
+        </div>
+    </div>
+    <!-- header section ends -->
+
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="image"></div>
+            <div class="about-content">
+                <h4>TENTANG KAMI.</h4>
+                <h1>Menghadirkan Kenikmatan dalam Setiap Hidangan yang Kami Sajikan</h1>
+                <h3>Bergabunglah dengan kami dalam perjalanan kuliner penuh rasa yang autentik</h3>
+                <p>Kami akan selalu memberikan pelayanan yang baik dan cita rasa yang khas di setiap hidangan yang kami sajikan.</p>
+            </div>
+        </div>
+    </section>
+    <!-- about section end -->
+
+    <!-- locations section start -->
+    <section class="locations">
+        <div class="container">
+            <div class="location">
+                <img src="img/music.jpg" alt="Live Music">
+                <h3>LIVE MUSIC</h3>
+                <p>Datang dan nikmati sajian live music di Dayana Coffee & Eatery<br>setiap hari Rabu, Jum'at, Sabtu, dan Minggu | Pukul 19.00-22.00</p>
+            </div>
+            <div class="location">
+                <img src="img/tim.jpg" alt="Our Team">
+                <h3>OUR TEAM</h3>
+                <p>Semua menu Dayana dibuat dengan menggunakan bahan baku pilihan terbaik untuk menghasilkan menu yang berkualitas.</p>
+            </div>
+        </div>
+    </section>
+    <!-- locations section end -->
+
+    <!-- menu section start -->
+    <section class="blog" id="blog">
+        <h1 class="heading">Dayana <span>Menu</span></h1>
+        <p class="heading-description">Lihat daftar menu kami yang lengkap, mulai dari makanan, minuman, hingga camilan favorit Anda.</p>
+        <div class="container">
+            <div class="post">
+                <div class="blog-img">
+                    <div class="img-slider" data-slider="1">
+                        <img src="img/makanan1.png" alt="Makanan 1">
+                        <img src="img/makanan2.png" alt="Makanan 2">
+                    </div>
+                    <button class="prev" onclick="slide(-1, 1)">&#10094;</button>
+                    <button class="next" onclick="slide(1, 1)">&#10095;</button>
+                </div>
+                <div class="blog-content">
+                    <h3>By Dayana | <span> MAKANAN </span></h3>
+                    <h1>Nikmati hidangan lezat dan penuh cita rasa khas cafe Dayana. Beragam macam menu olahan daging ayam, sapi, dan seafood tersedia di cafe Dayana..</h1>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <div class="img-slider" data-slider="2">
+                        <img src="img/minuman.png" alt="Minuman 1">
+                        <img src="img/minuman2.png" alt="Minuman 2">
+                    </div>
+                    <button class="prev" onclick="slide(-1, 2)">&#10094;</button>
+                    <button class="next" onclick="slide(1, 2)">&#10095;</button>
+                </div>
+                <div class="blog-content">
+                    <h3>By Dayana | <span> MINUMAN </span></h3>
+                    <h1>Temukan berbagai rasa dari menu minuman yang kami sediakan. Mulai dari minuman berbahan dasar kopi, susu, soda, teh, dan jus tersedia di cafe Dayana..</h1>
+                </div>
+            </div>
+            <div class="post">
+                <div class="blog-img">
+                    <div class="img-slider" data-slider="3">
+                        <img src="img/camilan.png" alt="Camilan">
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <h3>By Dayana | <span> CAMILAN </span></h3>
+                    <h1>Beragam menu camilan bisa kamu pilih untuk menemani kamu di cafe Dayana..</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- menu section end -->
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <h1 class="heading">contact <span>us</span></h1>
+        <p class="heading-description">kami selalu di sini untuk Anda.</p>
+        <div class="container">
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h2>Alamat <br> <span>Jl. Raya Banar Pilang No.7, <br>Pilang, Kec. Wonoayu, <br>Kabupaten Sidoarjo, <br>Jawa Timur 61261</span></h2>
+                </div>
+                <div>
+                    <p>Google Maps <br></p>
+                    <a href="https://maps.app.goo.gl/vZVJyy4bNppbkRKA8" target="_blank">
+                        <i class="fa-solid fa-right-long"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <h2>WhatsApp <br> <span><br>Tidak menerima telepon <br>Hanya Pesan saja<br><br></span></h2>
+                </div>
+                <div>
+                    <a href="https://wa.me/6282143018033" target="_blank">
+                        <p>Reservasi <br> Sekarang</p>
+                        <i class="fa-solid fa-right-long"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer section start -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer-box">
+                <h3>Tentang Kami</h3>
+                <p>Selamat datang di Dayana! Kami menghadirkan cafe yang dapat dinikmati semua kalangan. Semoga harimu menyenangkan!</p>
+                <p>copyright &copy;2024 all rights reserved by | kopidayana_sda</p>
+            </div>
+            <div class="footer-box">
+                <h3>follow us</h3>
+                <p>kunjungi sosial media kami!</p>
+                <div>
+                    <a href="https://g.co/kgs/8QA8kAC"><i class="fa-brands fa-google"></i></a>
+                    <a href="https://www.instagram.com/kopidayana_sda/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@dayanacoffe18?_t=8oCtKadQzUv&_r=1"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- javascript code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script type="text/javascript">
+        const sliderIndices = {1: 0, 2: 0, 3: 0};
+        function slide(direction, sliderNumber) {
+            const slider = document.querySelector(`.img-slider[data-slider="${sliderNumber}"]`);
+            const totalImages = slider.children.length;
+            sliderIndices[sliderNumber] += direction;
+            if (sliderIndices[sliderNumber] >= totalImages) {
+                sliderIndices[sliderNumber] = 0;
+            } else if (sliderIndices[sliderNumber] < 0) {
+                sliderIndices[sliderNumber] = totalImages - 1;
+            }
+            const offset = -sliderIndices[sliderNumber] * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
