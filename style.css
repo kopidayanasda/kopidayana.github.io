@@ -86,7 +86,7 @@ nav #menu-btn, nav #close {
 
 .header .content {
     padding: 130px 7%;
-    color: var(--white);
+    color: var(--red);
 }
 
 .header .content h3 {
@@ -97,12 +97,9 @@ nav #menu-btn, nav #close {
 }
 
 .header .content h1 {
-    font-size: 2.5em;
-    color: white;
-    text-shadow: 2px 2px 0 #8B4513, /* Shadow on top-left */
-                 -2px -2px 0 #8B4513, /* Shadow on bottom-right */
-                 2px -2px 0 #8B4513, /* Shadow on top-right */
-                 -2px 2px 0 #8B4513; /* Shadow on bottom-left */
+    {
+	font-size: 5rem;
+	letter-spacing: 2px;
 }
 
 .btn {
