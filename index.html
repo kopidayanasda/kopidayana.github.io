@@ -181,6 +181,21 @@
             const offset = -sliderIndices[sliderNumber] * 100;
             slider.style.transform = `translateX(${offset}%)`;
         }
+
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close');
+        const navLinks = document.getElementById('nav');
+
+        function openmenu() {
+            navLinks.classList.add('active');
+        }
+
+        function closemenu() {
+            navLinks.classList.remove('active');
+        }
+
+        menuBtn.addEventListener('click', openmenu);
+        closeBtn.addEventListener('click', closemenu);
     </script>
 </body>
 </html>
