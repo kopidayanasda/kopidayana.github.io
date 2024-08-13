@@ -87,6 +87,10 @@ nav #menu-btn,nav #close
 {
 	padding: 130px 7%;
 	color: var(--white);
+	text-shadow: 1px 1px 0 #723911, /* Shadow on top-left */
+                 -1px -1px 0 #723911, /* Shadow on bottom-right */
+                 1px -1px 0 #723911, /* Shadow on top-right */
+                 -1px 1px 0 #723911; /* Shadow on bottom-left */
 }
 .header .content h3
 {
@@ -99,7 +103,13 @@ nav #menu-btn,nav #close
 {
 	font-size: 5rem;
 	letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 0 #723911, /* Shadow on top-left */
+                 -2px -2px 0 #723911, /* Shadow on bottom-right */
+                 2px -2px 0 #723911, /* Shadow on top-right */
+                 -2px 2px 0 #723911; /* Shadow on bottom-left */
 }
+
 .btn
 {
 	padding: 1.3rem 5rem;
@@ -613,3 +623,29 @@ body {
 	line-height: 1.4; /* Mengurangi tinggi baris */
 	color: #666;
   }
+
+  /* Media Query untuk perangkat dengan lebar layar maksimal 768px */
+@media (max-width: 768px) {
+    .header, .footer {
+        background-size: contain; /* Gambar tidak akan membesar, hanya menyesuaikan dengan lebar container */
+        background-position: center;
+        height: auto; /* Mengubah tinggi header dan footer agar sesuai dengan konten */
+    }
+
+    .header .content {
+        padding: 50px 10%; /* Mengurangi padding agar konten header lebih sesuai di layar kecil */
+    }
+
+    nav .logo img {
+        width: 80px; /* Menyesuaikan ukuran logo agar lebih kecil di layar ponsel */
+    }
+
+    nav .links a {
+        font-size: 1rem; /* Menyesuaikan ukuran font */
+        margin-right: 1rem;
+    }
+
+    nav #menu-btn, nav #close {
+        font-size: 1.2rem; /* Sesuaikan ukuran ikon menu di ponsel */
+    }
+}
