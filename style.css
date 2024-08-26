@@ -87,10 +87,6 @@ nav #menu-btn,nav #close
 {
 	padding: 130px 7%;
 	color: var(--white);
-	text-shadow: 1px 1px 0 #723911, /* Shadow on top-left */
-                 -1px -1px 0 #723911, /* Shadow on bottom-right */
-                 1px -1px 0 #723911, /* Shadow on top-right */
-                 -1px 1px 0 #723911; /* Shadow on bottom-left */
 }
 .header .content h3
 {
@@ -104,10 +100,6 @@ nav #menu-btn,nav #close
 	font-size: 5rem;
 	letter-spacing: 2px;
     color: white;
-    text-shadow: 2px 2px 0 #723911, /* Shadow on top-left */
-                 -2px -2px 0 #723911, /* Shadow on bottom-right */
-                 2px -2px 0 #723911, /* Shadow on top-right */
-                 -2px 2px 0 #723911; /* Shadow on bottom-left */
 }
 
 .btn
@@ -624,28 +616,42 @@ body {
 	color: #666;
   }
 
-  /* Media Query untuk perangkat dengan lebar layar maksimal 768px */
+/* Default: tombol close disembunyikan, menu disembunyikan */
+#close {
+    display: none;
+}
+.links {
+    display: none;
+}
+
+/* Saat menu dalam keadaan aktif, tampilkan */
+.links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--bg);
+    padding: 10px;
+    z-index: 10001;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Opsional: tambahkan bayangan untuk estetika */
+}
+
+/* Responsif: Tampilkan tombol menu pada layar kecil */
 @media (max-width: 768px) {
-    .header, .footer {
-        background-size: contain; /* Gambar tidak akan membesar, hanya menyesuaikan dengan lebar container */
-        background-position: center;
-        height: auto; /* Mengubah tinggi header dan footer agar sesuai dengan konten */
+    #menu-btn {
+        display: inline-block;
     }
-
-    .header .content {
-        padding: 50px 10%; /* Mengurangi padding agar konten header lebih sesuai di layar kecil */
+    #nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px; /* Sesuaikan lebar menu */
+        height: 100vh;
+        background-color: var(--bg); /* Warna latar belakang menu */
     }
-
-    nav .logo img {
-        width: 80px; /* Menyesuaikan ukuran logo agar lebih kecil di layar ponsel */
-    }
-
-    nav .links a {
-        font-size: 1rem; /* Menyesuaikan ukuran font */
-        margin-right: 1rem;
-    }
-
-    nav #menu-btn, nav #close {
-        font-size: 1.2rem; /* Sesuaikan ukuran ikon menu di ponsel */
+    .links a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ccc; /* Opsional: garis bawah */
     }
 }
