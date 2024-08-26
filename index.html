@@ -131,7 +131,7 @@
             <div class="contact-box">
                 <div>
                     <i class="fa-solid fa-phone"></i>
-                    <h2>WhatsApp <br> <span><br>Tidak menerima telepon <br>Hanya Pesan saja<br><br></span></h2>
+                    <h2>WhatsApp <br> <span><br>Tidak menerima telepon <br>Hanya Pesan WA saja<br><br></span></h2>
                 </div>
                 <div>
                     <a href="https://wa.me/6282143018033" target="_blank">
@@ -183,16 +183,27 @@
         }
 
         const menuBtn = document.getElementById('menu-btn');
-        const closeBtn = document.getElementById('close');
-        const navLinks = document.getElementById('nav');
+const closeBtn = document.getElementById('close');
+const navLinks = document.getElementById('nav');
 
-        function openmenu() {
-            navLinks.classList.add('active');
-        }
+function openmenu() {
+    console.log("Menu dibuka");
+    navLinks.classList.add('active'); 
+    console.log(navLinks.classList); // Ini akan menampilkan daftar kelas untuk memastikan 'active' sudah ditambahkan
+    menuBtn.style.display = 'none';  
+    closeBtn.style.display = 'block'; 
+}
 
-        function closemenu() {
-            navLinks.classList.remove('active');
-        }
+function closemenu() {
+    console.log("Menu ditutup");
+    navLinks.classList.remove('active');
+    console.log(navLinks.classList); // Ini akan menampilkan daftar kelas untuk memastikan 'active' sudah dihapus
+    menuBtn.style.display = 'block';     
+    closeBtn.style.display = 'none';     
+}
+
+
+
 
         menuBtn.addEventListener('click', openmenu);
         closeBtn.addEventListener('click', closemenu);
